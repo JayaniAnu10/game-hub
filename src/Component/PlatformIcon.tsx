@@ -38,12 +38,11 @@ const PlatformIcon = ({ platforms }: Props) => {
     "ps-vita": SiPlaystationvita,
     "nintendo-switch": SiNintendo,
   };
-  console.log(platforms);
 
   return (
     <HStack marginY={1}>
       {platforms.map((platform) => (
-        <Icon as={iconMap[platform.slug]} color="gray.500" />
+        <Icon key={platform.id} as={iconMap[platform.slug]} color="gray.500" />
       ))}
     </HStack>
   );
